@@ -1,3 +1,10 @@
+<?php
+
+require_once "conection.php";
+require_once "register.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +29,7 @@
                 <button class="sign-up-btn">Iniciar Sesion</button>
             </div>
         </div>
-        <form class="formulario">
+        <form class="formulario" method="post">
             <h2 class="create-account">Crear una cuenta</h2>
             <div class="iconos">
                 <div class="border-icon">
@@ -36,11 +43,32 @@
                 </div>
             </div>
             <p class="cuenta-gratis">Crear una cuenta gratis</p>
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Contraseña">
-            <input type="button" value="Registrarse">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="contraseña" placeholder="Contraseña">
+            <input type="submit" name="enviar" value="Registrarse">
+
+            <?php
+
+            if ($fields == true){
+                echo "Todos los campos son obligatorios";
+                $fields = false;
+            }
+
+            if ($short == true){
+                echo "La contraseña es demasiado corta, debe tener mínimo 8 caracteres";
+                $short = false;
+            }
+
+            if ($registered == true){
+                echo "Usuario registrado";
+                $registered = false;
+            }
+
+            ?>
+
         </form>
+
     </div>
     <div class="container-form sign-in">
         <form class="formulario">
