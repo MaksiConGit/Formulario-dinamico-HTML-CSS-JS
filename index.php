@@ -65,6 +65,11 @@ require_once "register.php";
                 $registered = false;
             }
 
+            if ($already_registered == true){
+                echo "Ya se registró un usuario con ese email";
+                $already_registered = false;
+            }
+
             ?>
 
         </form>
