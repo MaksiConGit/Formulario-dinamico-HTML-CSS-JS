@@ -2,6 +2,7 @@
 
 require_once "conection.php";
 require_once "register.php";
+require_once "login.php";
 
 ?>
 
@@ -76,7 +77,7 @@ require_once "register.php";
 
     </div>
     <div class="container-form sign-in">
-        <form class="formulario">
+        <form class="formulario" method="post">
             <h2 class="create-account">Iniciar Sesion</h2>
             <div class="iconos">
                 <div class="border-icon">
@@ -90,9 +91,16 @@ require_once "register.php";
                 </div>
             </div>
             <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Contraseña">
-            <input type="button" value="Iniciar Sesion">
+            <input type="email" name="logemail" placeholder="Email">
+            <input type="password" name="logpass" placeholder="Contraseña">
+            <input type="submit" name="logenviar" value="Iniciar Sesion">
+
+            <?php
+
+
+
+            ?>
+
         </form>
         <div class="welcome-back">
             <div class="message">

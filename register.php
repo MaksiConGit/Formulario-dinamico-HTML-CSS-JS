@@ -45,6 +45,7 @@ if (!empty($_POST['enviar'])){
     else{
         // echo "Todos los campos son obligatorios";
         $fields = true;
+
     }
     
 }
